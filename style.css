@@ -1,0 +1,77 @@
+/* === Палитра AI-native IRL: «тёплое человеческое» на «холодном машинном» === */
+:root {
+  --slidev-theme-primary: #3ddc97;
+  --irl-accent: #3ddc97;        /* акцент — мята, «машинное» */
+  --irl-warm: #ff7a59;          /* тёплый — «человеческое», быт */
+}
+
+/* --- Тёмная тема --- */
+html.dark {
+  --irl-bg: #0f1115;
+  --irl-fg: #ffffff;
+  --irl-heading: #ffffff;
+  --irl-link: #3ddc97;
+  --irl-muted: #8b94a3;
+  --irl-ui: #ffffff;
+}
+
+/* --- Светлая тема --- */
+html:not(.dark) {
+  --irl-bg: #ffffff;
+  --irl-fg: #18181b;
+  --irl-heading: #0d1117;
+  --irl-link: #0f8f62;          /* тёмная мята — читаемо на белом */
+  --irl-muted: #5b6472;
+  --irl-ui: #18181b;
+}
+
+.slidev-layout {
+  background-color: var(--irl-bg);
+  color: var(--irl-fg);
+}
+
+.slidev-layout a {
+  color: var(--irl-link);
+}
+
+/* Переопределяем seriph: заголовки без засечек */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4,
+.slidev-layout h5,
+.slidev-layout h6 {
+  font-family: 'Lexend Deca', var(--slidev-font-sans), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--irl-heading);
+}
+
+.slidev-layout h1 {
+  font-weight: 800;
+}
+
+/* Утилиты для контента */
+.irl-accent { color: var(--irl-accent); }
+.irl-warm { color: var(--irl-warm); }
+.irl-muted { color: var(--irl-muted); }
+
+/* Карточка — для сеток «сценарий / приём / правило» */
+.irl-card {
+  border: 1px solid color-mix(in srgb, var(--irl-fg) 14%, transparent);
+  border-radius: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  background: color-mix(in srgb, var(--irl-fg) 4%, transparent);
+}
+
+/* Номер слайда справа внизу */
+.slidev-page-no {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.75rem;
+  font-family: 'IBM Plex Mono', var(--slidev-font-mono), monospace;
+  font-size: 0.95rem;
+  color: var(--irl-ui);
+  opacity: 0.85;
+  z-index: 20;
+}
