@@ -49,7 +49,7 @@ src: ./slides/case-vps.md
 ---
 
 ---
-src: ./slides/02-rest.md
+src: ./slides/cases-quick.md
 ---
 
 ---
