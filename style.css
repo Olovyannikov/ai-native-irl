@@ -1,28 +1,38 @@
-/* === Палитра AI-native IRL: «тёплое человеческое» на «холодном машинном» === */
+/* === Палитра HolyJS ===
+   Брендовый малиновый #f644d1 и фон #010a12 взяты с holyjs.ru.
+   Циан — холодный контрапункт, оранжевый — «тёплое человеческое» и риск.
+   Светлая тема использует затемнённые варианты: чистый #f644d1 на белом
+   даёт ~3:1 и годится только для крупных заголовков. */
 :root {
-  --slidev-theme-primary: #3ddc97;
-  --irl-accent: #3ddc97;        /* акцент — мята, «машинное» */
-  --irl-warm: #ff7a59;          /* тёплый — «человеческое», быт */
-}
+  --slidev-theme-primary: #f644d1;
 
-/* --- Тёмная тема --- */
-html.dark {
-  --irl-bg: #0f1115;
-  --irl-fg: #ffffff;
-  --irl-heading: #ffffff;
-  --irl-link: #3ddc97;
-  --irl-muted: #8b94a3;
-  --irl-ui: #ffffff;
-}
+  /* акценты — светлая тема (затемнены до читаемого контраста на белом) */
+  --irl-accent: #b00098;   /* брендовый малиновый */
+  --irl-cool: #007a8f;     /* холодный, «машинное» */
+  --irl-warm: #c73a00;     /* тёплое человеческое и «осторожно» */
+  --irl-warn: #8a6d00;     /* предупреждение */
 
-/* --- Светлая тема --- */
-html:not(.dark) {
   --irl-bg: #ffffff;
   --irl-fg: #18181b;
-  --irl-heading: #0d1117;
-  --irl-link: #0f8f62;          /* тёмная мята — читаемо на белом */
+  --irl-heading: #010a12;
+  --irl-link: #b00098;
   --irl-muted: #5b6472;
   --irl-ui: #18181b;
+}
+
+/* --- Тёмная тема: фон HolyJS, акценты в полную яркость --- */
+html.dark {
+  --irl-accent: #f644d1;
+  --irl-cool: #00e2fd;
+  --irl-warm: #ff5e29;
+  --irl-warn: #fecf16;
+
+  --irl-bg: #010a12;
+  --irl-fg: #ffffff;
+  --irl-heading: #ffffff;
+  --irl-link: #f644d1;
+  --irl-muted: #8b94a3;
+  --irl-ui: #ffffff;
 }
 
 .slidev-layout {
@@ -51,10 +61,25 @@ html:not(.dark) {
   font-weight: 800;
 }
 
-/* Утилиты для контента */
+/* Семантические утилиты для контента */
 .irl-accent { color: var(--irl-accent); }
-.irl-warm { color: var(--irl-warm); }
-.irl-muted { color: var(--irl-muted); }
+.irl-cool   { color: var(--irl-cool); }
+.irl-warm   { color: var(--irl-warm); }
+.irl-warn   { color: var(--irl-warn); }
+.irl-muted  { color: var(--irl-muted); }
+
+/* Бейдж конфы на титуле */
+.irl-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: #f644d1;
+  color: #010a12;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
 /* Карточка — для сеток «сценарий / приём / правило» */
 .irl-card {
@@ -63,6 +88,12 @@ html:not(.dark) {
   padding: 0.9rem 1.1rem;
   background: color-mix(in srgb, var(--irl-fg) 4%, transparent);
 }
+
+/* Акцентная рамка карточки — для квадрантов матрицы */
+.irl-card-accent { border-color: color-mix(in srgb, var(--irl-accent) 55%, transparent); }
+.irl-card-cool   { border-color: color-mix(in srgb, var(--irl-cool) 55%, transparent); }
+.irl-card-warm   { border-color: color-mix(in srgb, var(--irl-warm) 55%, transparent); }
+.irl-card-warn   { border-color: color-mix(in srgb, var(--irl-warn) 55%, transparent); }
 
 /* Номер слайда справа внизу */
 .slidev-page-no {

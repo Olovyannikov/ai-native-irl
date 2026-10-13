@@ -1,27 +1,27 @@
 import { defineMermaidSetup } from '@slidev/types'
 
-// Цвета диаграмм под палитру доклада
+// Цвета диаграмм под палитру HolyJS
 export default defineMermaidSetup(() => {
   return {
     theme: 'base',
     themeVariables: {
-      background: '#0f1115',
+      background: '#010a12',
       textColor: '#fafafa',
       fontFamily: 'Lexend Deca, ui-sans-serif, sans-serif',
       fontSize: '15px',
 
-      primaryColor: '#1a1d24',
-      primaryBorderColor: '#3ddc97',
+      primaryColor: '#0d1620',
+      primaryBorderColor: '#f644d1',
       primaryTextColor: '#fafafa',
-      secondaryColor: '#1a1d24',
-      secondaryBorderColor: '#ff7a59',
+      secondaryColor: '#0d1620',
+      secondaryBorderColor: '#00e2fd',
       secondaryTextColor: '#fafafa',
-      tertiaryColor: '#1a1d24',
-      tertiaryBorderColor: '#8b94a3',
+      tertiaryColor: '#0d1620',
+      tertiaryBorderColor: '#ff5e29',
       tertiaryTextColor: '#fafafa',
 
-      lineColor: '#3ddc97',
-      edgeLabelBackground: '#0f1115',
+      lineColor: '#f644d1',
+      edgeLabelBackground: '#010a12',
     },
   }
 })
